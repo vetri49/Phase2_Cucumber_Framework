@@ -56,8 +56,9 @@ public class AmazonHomepageSteps {
 	}
 
 	@Then("Verify meta title of the curent page")
-	public void verify_meta_title_of_the_curent_page() {
+	public void verify_meta_title_of_the_curent_page() throws InterruptedException {
 		String expectedTitle = "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in";
+		Thread.sleep(1000);
 		String actualTitle = driver.getTitle();
 		Assertions.assertNotEquals(actualTitle, expectedTitle);
 	}
