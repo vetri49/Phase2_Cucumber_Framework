@@ -9,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -18,10 +20,21 @@ public class ResetLoginFormSteps {
 	String siteurl="C:/Phase2_Eclipse_Workspace/Phase2_BDD_Cucumber/src/main/resource/static/Login.html";
 	WebDriver driver;
 	
+	@Before(value="@ResetLogin")
+	public void setup() {
+		
+		System.setProperty("webdriver.chrome.driver", driverpath);
+	    driver=new ChromeDriver();
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+		
+	}
+	@After(value="@ResetLogin")
+	public void cleanup() {
+		driver.quit();
+		
+	}
 	@Given("Open the Chrome and launch the application")
 	public void open_the_chrome_and_launch_the_application() throws InterruptedException {
-	    System.setProperty("webdriver.chrome.driver", driverpath);
-	    driver=new ChromeDriver();
 	    driver.get(siteurl);
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 	    Thread.sleep(1000);

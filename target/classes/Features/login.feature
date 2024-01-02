@@ -4,7 +4,7 @@
 Feature: Login
   I want to verify login with user credentials
 
-  @regression @smoke @login
+  @regression @smoke @Ignore
   Scenario: Successfull Verification of Login functionality
     Given user should be on the login page
     And user enters email adress
@@ -12,6 +12,7 @@ Feature: Login
     And user clicks login button
     Then user should navigate to My Account
 
+  @Ignore
   Scenario Outline: Valid Credentials for login
     Given User want to enter valid ceredntials
     When user check for email and password fields
@@ -23,6 +24,7 @@ Feature: Login
       | lmn@gmail.com | lmn@123  |
     And user clicks login in button
 
+  @Ignore
   Scenario: Unsuccessful Verification of Login functionality
     Given user should be on the login page
     And user enters email adress

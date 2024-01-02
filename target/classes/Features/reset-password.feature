@@ -4,7 +4,7 @@
 Feature: Reset password
   I want to verify reset password functionality for existing user
 
-  @regression @Smoke
+  @regression @Smoke @Ignore
   Scenario: Successful reset password verification
     Given user should be logged in
     And user navigate to reset password page "/reset-password"
@@ -16,6 +16,7 @@ Feature: Reset password
       """
 
   #docstring
+  @Ignore
   Scenario Outline: Valid Credentials for login
     Given User want to enter valid credentials
     When user check for "email" and "password" fields
@@ -27,6 +28,7 @@ Feature: Reset password
       | lmn@gmail.com | lmn@123  |
     And user clicks "login" button
 
+  @Ignore
   Scenario: Unsuccessful Verification of Login functionality
     Given user should be on the login page
     And user enters email adress

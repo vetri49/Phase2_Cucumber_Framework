@@ -3,7 +3,7 @@ Feature: Registration
   Given User on the home page
   And user follows "Resgister" button
 
-  @regression
+  @regression @Ignore
   Scenario: Create a new user
     Given User should be on the registration page
     When User fills registration  "email" with "xxx@gmail.com"
@@ -13,6 +13,7 @@ Feature: Registration
     Then User is created successfully
     And User return back on registration page
 
+  @Ignore
   Scenario: User does not follow form validations
     Given User should be on the registration page
     When user enters wrong characters

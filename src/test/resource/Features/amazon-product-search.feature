@@ -3,6 +3,7 @@
 Feature: Search products on amazon
   User wants to search multiple products on amazon
 
+  @Search
   Scenario: Verification of search feature button with number of products
     Given Open chrome browser and Amazon application
     And Maximize browser window size

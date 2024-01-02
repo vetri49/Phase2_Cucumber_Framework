@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,10 +19,22 @@ public class StaticLoginSteps {
 	String siteurl="C:/Phase2_Eclipse_Workspace/Phase2_BDD_Cucumber/src/main/resource/static/Login.html";
 	WebDriver driver;
 	
+	@Before(value="@LoginTest")
+	public void setup() {
+		
+		System.setProperty("webdriver.chrome.driver", driverpath);
+	    driver=new ChromeDriver();
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+		
+	}
+	@After(value="@LoginTest")
+	public void cleanup() {
+		driver.quit();
+		
+	}
 	@Given("Open the Chrome and Launch the test application")
 	public void open_the_chrome_and_launch_the_test_application() {
-	    System.setProperty("webdriver.chrome.driver", driverpath);
-	    driver=new ChromeDriver();
+	    
 	    driver.get(siteurl);
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 	}

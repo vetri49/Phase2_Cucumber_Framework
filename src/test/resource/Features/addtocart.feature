@@ -1,11 +1,11 @@
 #Author: xxx@gmail.com
-@FeatureTest 
+@AddCartTest
 Feature: Add to cart
   This feature will test functionality of adding different products to the user cart(basket) from different flow
 
   Background: User is logged in
 
-  @tag1
+  @AddCartTest
   Scenario: Search a product and add the first product/result to basket
     Given User search for a product "Lenovo Laptop"
     When add the first laptop that appears in the  search results to the basket

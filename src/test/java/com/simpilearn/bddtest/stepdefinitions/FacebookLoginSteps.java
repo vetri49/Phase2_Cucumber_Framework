@@ -21,7 +21,7 @@ public class FacebookLoginSteps {
 	
 	    
 	
-	@Before(value="@Fb2Test")
+	@Before(value="@FbTest")
 	public void setup() {
 		System.setProperty("webdriver.chrome.driver", driverpath);
 	    driver=new ChromeDriver();
@@ -29,7 +29,7 @@ public class FacebookLoginSteps {
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		
 	}
-	@After(value="@Fb2Test")
+	@After(value="@FbTest")
 	public void cleanup() {
 		driver.quit();
 		
@@ -39,14 +39,14 @@ public class FacebookLoginSteps {
 	   driver.get(siteurl+"/login");
 	}
 
-	@Given("^User enters email address \"([^\"]*)\"$")
-	public void user_enters_email_address(String username) {
-	    driver.findElement(By.id("email")).sendKeys(username);
+	@Given("User enters email address")
+	public void user_enters_email_address() {
+	    driver.findElement(By.id("email")).sendKeys("abcd@gmail.com");
 	}
 
-	@Given("^User enters password \"([^\"]*)\"$")
-	public void user_enters_password(String password) {
-	    driver.findElement(By.id("pass")).sendKeys(password);
+	@Given("User enters password")
+	public void user_enters_password() {
+	    driver.findElement(By.id("pass")).sendKeys("dwj92ebds");
 	}
 
 	@Given("User clicks on login button")
@@ -54,7 +54,7 @@ public class FacebookLoginSteps {
 	    driver.findElement(By.name("login")).click();
 	}
 
-	@Then("Error message should be displayed with wrong credentials")
+	@Then("Error message should be displayed with wrong credentials for user")
 	public void error_message_should_be_displayed_with_wrong_credentials() throws InterruptedException {
 		Thread.sleep(1000);
 		WebElement errorEm = driver.findElement(By.className("_9ay7"));

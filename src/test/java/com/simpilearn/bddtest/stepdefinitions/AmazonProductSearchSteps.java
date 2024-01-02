@@ -10,6 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
@@ -18,10 +20,21 @@ public class AmazonProductSearchSteps {
 	String siteurl="https://www.amazon.in/";
 	WebDriver driver;
 	
-	@Given("Open chrome browser and Amazon application")
-	public void open_chrome_browser_and_amazon_application() {
+	@Before(value="@Search")
+	public void setup() {
+		
 		System.setProperty("webdriver.chrome.driver", driverpath);
 	    driver=new ChromeDriver();
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+		
+	}
+	@After(value="@Search")
+	public void cleanup() {
+		driver.quit();
+		
+	}
+	@Given("Open chrome browser and Amazon application")
+	public void open_chrome_browser_and_amazon_application() {
 	    driver.get(siteurl);
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 	    

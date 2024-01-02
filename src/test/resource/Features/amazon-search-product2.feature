@@ -5,7 +5,7 @@ Feature: Search product on amazon
 
   @AmazonSearchTest2 @SmokeTest
   Scenario Outline: Search feature button with number of products on amazon
-    Given Launch Amazon application on chrome
+    Given Launch amazon application on chrome
     # And Maximize browser window size
     When Enter  search product "<name>"
     Then Submit product search

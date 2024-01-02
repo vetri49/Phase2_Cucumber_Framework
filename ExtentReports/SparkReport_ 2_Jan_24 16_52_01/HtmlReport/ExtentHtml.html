@@ -1,0 +1,3055 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title></title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'></span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Jan 2, 2024 04:52:01 pm</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@tag2</a></li>
+					<li><a href='#'>@Regression</a></li>
+					<li><a href='#'>@FunctionalTest</a></li>
+					<li><a href='#'>@End2End</a></li>
+					<li><a href='#'>@Fb2Test</a></li>
+					<li><a href='#'>@Smoke</a></li>
+					<li><a href='#'>@login</a></li>
+					<li><a href='#'>@FeatureTest</a></li>
+					<li><a href='#'>@FbTest</a></li>
+					<li><a href='#'>@AmazonSearchTest2</a></li>
+					<li><a href='#'>@Search</a></li>
+					<li><a href='#'>@ResetLogin</a></li>
+					<li><a href='#'>@RegressionTest</a></li>
+					<li><a href='#'>@tag1</a></li>
+					<li><a href='#'>@SmokeTest</a></li>
+					<li><a href='#'>@tag3</a></li>
+					<li><a href='#'>@HomepageTest</a></li>
+					<li><a href='#'>@regression</a></li>
+					<li><a href='#'>@LoginTest</a></li>
+					<li><a href='#'>@smoke</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$57%'>
+                    <span class='strong'>8</span> features passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='42%'>
+                    6</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='78%'>
+                    <span class='strong'>32</span> scenarios passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='21%'>
+                    9</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='73%'>
+                    <span class='strong'>104</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='6%'>
+                    9</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='19%'>
+                    28</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Add to cart</span>
+						<span class='test-time'>Jan 2, 2024 04:52:02 pm</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  This feature will test functionality of adding different products to the user cart(basket) from different flow</div>
+
+<div class='scenario node' test-id='2' status='fail'>
+
+	<span class='duration right label'>00 00 00.027</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Search a product and add the first product/result to basket</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@FeatureTest</span>
+				<span class='category label'>@tag1</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='6' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given User search for a product "Lenovo Laptop"</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='9' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When add the first laptop that appears in the  search results to the basket</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='12' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user clicks on cart link</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='15' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then user basket should display added 1 item</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>Amazon Homepage test</span>
+						<span class='test-time'>Jan 2, 2024 04:52:02 pm</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  User want to verify the homepage functionality</div>
+
+<div class='scenario node' test-id='20' status='pass'>
+
+	<span class='duration right label'>00 00 02.990</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Amazon Homepage title verification</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@HomepageTest</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='24' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.AmazonHomepageSteps.open_the_chrome_and_launch_the_amazon_application())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Open the Chrome and Launch the amazon application</div>
+
+
+		</li>
+		<li test-id='27' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.AmazonHomepageSteps.user_on_amazon_homepage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User on amazon homepage</div>
+
+
+		</li>
+		<li test-id='30' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.AmazonHomepageSteps.verify_meta_title_of_the_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Verify meta title of the page</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='34' status='pass'>
+
+	<span class='duration right label'>00 00 05.822</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Should not be Amazon Homepage</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@HomepageTest</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='38' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.AmazonHomepageSteps.open_the_chrome_and_launch_the_amazon_application())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Open the Chrome and Launch the amazon application</div>
+
+
+		</li>
+		<li test-id='41' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.AmazonHomepageSteps.navigate_user_on_dirrent_link())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Navigate user on different link</div>
+
+
+		</li>
+		<li test-id='44' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.AmazonHomepageSteps.verify_meta_title_of_the_curent_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Verify meta title of the curent page</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='48'>
+					<div class='test-heading'>
+						<span class='test-name'>Search products on amazon</span>
+						<span class='test-time'>Jan 2, 2024 04:52:11 pm</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  User wants to search multiple products on amazon</div>
+
+<div class='scenario node' test-id='49' status='pass'>
+
+	<span class='duration right label'>00 00 13.605</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verification of search feature button with number of products</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Search</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='53' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.AmazonProductSearchSteps.open_chrome_browser_and_amazon_application())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Open chrome browser and Amazon application</div>
+
+
+		</li>
+		<li test-id='56' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.AmazonProductSearchSteps.maximize_browser_window_size())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Maximize browser window size</div>
+
+
+		</li>
+		<li test-id='59' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.AmazonProductSearchSteps.enter_the_product_search(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Enter the product search</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>name</td><td>title</td></tr><tr><td>Iphone 15 pro max</td><td>Amazon.in : Iphone 15 pro max</td></tr><tr><td>Apple Mac book</td><td>Amazon.in : Apple Mac book</td></tr></table></div>
+		</li>
+		<li test-id='62' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.AmazonProductSearchSteps.submit_search_for_the_product())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Submit Search for the product</div>
+
+
+		</li>
+		<li test-id='65' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.AmazonProductSearchSteps.clear_search())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Clear search</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='69'>
+					<div class='test-heading'>
+						<span class='test-name'>Search product on amazon</span>
+						<span class='test-time'>Jan 2, 2024 04:52:24 pm</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  User wants to search multiple products on amazon</div>
+
+<div class='scenario outline node' test-id='70' status='fail'>
+
+	<span class='duration right label'>00 01 03.987</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Search feature button with number of products on amazon</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>name</td><td>title</td></tr><tr><td>Iphone 15 pro max</td><td>Amazon.in : Iphone 15 pro max</td></tr><tr><td>Apple Mac book</td><td>Amazon.in : Apple Mac book</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='71' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Search feature button with number of products on amazon</div>
+
+				<div class='category-list'>
+						<span class='category label'>@SmokeTest</span>
+						<span class='category label'>@AmazonSearchTest2</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='75' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.launch_amazon_application_on_chrome()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Launch amazon application on chrome</h6>
+
+				</li>
+				<li test-id='78' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.enter_search_product(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter  search product "Iphone 15 pro max"</h6>
+
+				</li>
+				<li test-id='81' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.submit_product_search()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Submit product search</h6>
+
+				</li>
+				<li test-id='84' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.verify_page_title(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Verify page title "Amazon.in : Iphone 15 pro max"</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='88' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Search feature button with number of products on amazon</div>
+
+				<div class='category-list'>
+						<span class='category label'>@SmokeTest</span>
+						<span class='category label'>@AmazonSearchTest2</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='92' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.launch_amazon_application_on_chrome()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Launch amazon application on chrome</h6>
+
+				</li>
+				<li test-id='95' class='gc when Fail' status='Fail'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.enter_search_product(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When Enter  search product "Apple Mac book"</h6>
+
+							<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#twotabsearchtextbox"}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [68712c24fb858518dbe06d3fb18dcbaa, findElement {using=id, value=twotabsearchtextbox}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\vetri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52131}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52131/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 68712c24fb858518dbe06d3fb18dcbaa
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at com.simpilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.enter_search_product(AmazonProductSearch2Steps.java:51)
+	at ✽.Enter  search product "Apple Mac book"(file:///C:/Phase2_Eclipse_Workspace/Phase2_BDD_Cucumber/src/test/resource/Features/amazon-search-product2.feature:10)
+</textarea>
+				</li>
+				<li test-id='98' class='gc then Skip' status='Skip'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.submit_product_search()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Submit product search</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='101' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.verify_page_title(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Verify page title "Amazon.in : Apple Mac book"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='105'>
+					<div class='test-heading'>
+						<span class='test-name'>Facebook login feature</span>
+						<span class='test-time'>Jan 2, 2024 04:53:28 pm</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  User wants to verify whether it is successful or unsuccessful login</div>
+
+<div class='scenario outline node' test-id='106' status='pass'>
+
+	<span class='duration right label'>00 00 29.682</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Unsuccessful login functionality</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>username</td><td>password</td></tr><tr><td>abc</td><td>nvunirg</td></tr><tr><td>pqr</td><td>cmeooevo</td></tr><tr><td>lmn</td><td>voefpfnc</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='107' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Unsuccessful login functionality</div>
+
+				<div class='category-list'>
+						<span class='category label'>@SmokeTest</span>
+						<span class='category label'>@Fb2Test</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='111' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_should_be_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User should be on login page</h6>
+
+				</li>
+				<li test-id='114' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_enters_email_address(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User enters email address "abc"</h6>
+
+				</li>
+				<li test-id='117' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_enters_password(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User enters password "nvunirg"</h6>
+
+				</li>
+				<li test-id='120' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_clicks_on_login_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks on login button</h6>
+
+				</li>
+				<li test-id='123' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.error_message_should_be_displayed_with_wrong_credentials()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Error message should be displayed with wrong credentials</h6>
+
+				</li>
+				<li test-id='126' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_return_backs_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User return backs on login page</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='130' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Unsuccessful login functionality</div>
+
+				<div class='category-list'>
+						<span class='category label'>@SmokeTest</span>
+						<span class='category label'>@Fb2Test</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='134' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_should_be_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User should be on login page</h6>
+
+				</li>
+				<li test-id='137' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_enters_email_address(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User enters email address "pqr"</h6>
+
+				</li>
+				<li test-id='140' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_enters_password(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User enters password "cmeooevo"</h6>
+
+				</li>
+				<li test-id='143' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_clicks_on_login_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks on login button</h6>
+
+				</li>
+				<li test-id='146' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.error_message_should_be_displayed_with_wrong_credentials()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Error message should be displayed with wrong credentials</h6>
+
+				</li>
+				<li test-id='149' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_return_backs_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User return backs on login page</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='153' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Unsuccessful login functionality</div>
+
+				<div class='category-list'>
+						<span class='category label'>@SmokeTest</span>
+						<span class='category label'>@Fb2Test</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='157' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_should_be_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User should be on login page</h6>
+
+				</li>
+				<li test-id='160' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_enters_email_address(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User enters email address "lmn"</h6>
+
+				</li>
+				<li test-id='163' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_enters_password(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User enters password "voefpfnc"</h6>
+
+				</li>
+				<li test-id='166' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_clicks_on_login_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks on login button</h6>
+
+				</li>
+				<li test-id='169' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.error_message_should_be_displayed_with_wrong_credentials()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Error message should be displayed with wrong credentials</h6>
+
+				</li>
+				<li test-id='172' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_return_backs_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User return backs on login page</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='176'>
+					<div class='test-heading'>
+						<span class='test-name'>Facebook login feature</span>
+						<span class='test-time'>Jan 2, 2024 04:53:58 pm</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  User wants to verify whether it is successful or unsuccessful login</div>
+
+<div class='scenario node' test-id='177' status='fail'>
+
+	<span class='duration right label'>00 00 00.003</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Unsuccessful login functionality</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@SmokeTest</span>
+				<span class='category label'>@FbTest</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='180' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_should_be_on_login_page())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given User should be on login page</div>
+
+
+					<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+	at com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_should_be_on_login_page(FacebookLoginSteps.java:39)
+	at ✽.User should be on login page(file:///C:/Phase2_Eclipse_Workspace/Phase2_BDD_Cucumber/src/test/resource/Features/facebook-login.feature:7)
+</textarea>
+		</li>
+		<li test-id='183' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And User enters email address</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='186' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And User enters password</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='189' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_clicks_on_login_button())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And User clicks on login button</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='192' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.error_message_should_be_displayed_with_wrong_credentials())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Error message should be displayed with wrong credentials</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='195' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_return_backs_on_login_page())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And User return backs on login page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='198'>
+					<div class='test-heading'>
+						<span class='test-name'>Title of your feature</span>
+						<span class='test-time'>Jan 2, 2024 04:53:58 pm</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  I want to use this template for my feature file</div>
+
+<div class='scenario node' test-id='199' status='pass'>
+
+	<span class='duration right label'>00 00 00.004</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Title of your  1st scenario</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@tag1</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='203' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_want_to_write_a_step_with_precondition())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I want to write a step with precondition</div>
+
+
+		</li>
+		<li test-id='206' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.some_other_precondition())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And some other precondition</div>
+
+
+		</li>
+		<li test-id='209' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_complete_action())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I complete action</div>
+
+
+		</li>
+		<li test-id='212' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_validate_the_outcomes())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I validate the outcomes</div>
+
+
+		</li>
+		<li test-id='215' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.check_more_outcomes())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And check more outcomes</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='219' status='pass'>
+
+	<span class='duration right label'>00 00 00.007</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Title of your 2nd scenario</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@tag2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='223' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_want_to_write_a_step_with_precondition())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I want to write a step with precondition</div>
+
+
+		</li>
+		<li test-id='226' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.some_other_precondition())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And some other precondition</div>
+
+
+		</li>
+		<li test-id='229' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_complete_action())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I complete action</div>
+
+
+		</li>
+		<li test-id='232' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_validate_the_outcomes())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I validate the outcomes</div>
+
+
+		</li>
+		<li test-id='235' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.check_more_outcomes())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And check more outcomes</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='239' status='pass'>
+
+	<span class='duration right label'>00 00 00.006</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Title of your  3rd scenario</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@tag3</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='243' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_want_to_write_a_step_with_precondition())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I want to write a step with precondition</div>
+
+
+		</li>
+		<li test-id='246' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.some_other_precondition())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And some other precondition</div>
+
+
+		</li>
+		<li test-id='249' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_complete_action())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I complete action</div>
+
+
+		</li>
+		<li test-id='252' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_validate_the_outcomes())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I validate the outcomes</div>
+
+
+		</li>
+		<li test-id='255' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.HooksExSteps.check_more_outcomes())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And check more outcomes</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='259'>
+					<div class='test-heading'>
+						<span class='test-name'>Test Hooks with Scenario Outline</span>
+						<span class='test-time'>Jan 2, 2024 04:53:58 pm</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  I want to use this template for my feature file</div>
+
+<div class='scenario outline node' test-id='260' status='pass'>
+
+	<span class='duration right label'>00 00 00.015</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Title of your scenario outline</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Scenario</td></tr><tr><td>First</td></tr><tr><td>Second</td></tr><tr><td>Third</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='261' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Title of your scenario outline</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='264' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_want_to_write_a_step_with_precondition()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I want to write a step with precondition</h6>
+
+				</li>
+				<li test-id='267' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.some_other_precondition()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And some other precondition</h6>
+
+				</li>
+				<li test-id='270' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_complete_action()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I complete action</h6>
+
+				</li>
+				<li test-id='273' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_validate_the_outcomes()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I validate the outcomes</h6>
+
+				</li>
+				<li test-id='276' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.check_more_outcomes()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And check more outcomes</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='279' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Title of your scenario outline</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='282' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_want_to_write_a_step_with_precondition()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I want to write a step with precondition</h6>
+
+				</li>
+				<li test-id='285' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.some_other_precondition()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And some other precondition</h6>
+
+				</li>
+				<li test-id='288' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_complete_action()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I complete action</h6>
+
+				</li>
+				<li test-id='291' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_validate_the_outcomes()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I validate the outcomes</h6>
+
+				</li>
+				<li test-id='294' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.check_more_outcomes()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And check more outcomes</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='297' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Title of your scenario outline</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='300' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_want_to_write_a_step_with_precondition()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I want to write a step with precondition</h6>
+
+				</li>
+				<li test-id='303' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.some_other_precondition()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And some other precondition</h6>
+
+				</li>
+				<li test-id='306' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_complete_action()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I complete action</h6>
+
+				</li>
+				<li test-id='309' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.i_validate_the_outcomes()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I validate the outcomes</h6>
+
+				</li>
+				<li test-id='312' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.HooksExSteps.check_more_outcomes()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And check more outcomes</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='315'>
+					<div class='test-heading'>
+						<span class='test-name'>Login</span>
+						<span class='test-time'>Jan 2, 2024 04:53:58 pm</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  I want to verify login with user credentials</div>
+
+<div class='scenario node' test-id='316' status='pass'>
+
+	<span class='duration right label'>00 00 00.003</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successfull Verification of Login functionality</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@smoke</span>
+				<span class='category label'>@regression</span>
+				<span class='category label'>@login</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='319' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_should_be_on_the_login_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user should be on the login page</div>
+
+
+		</li>
+		<li test-id='322' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_enters_email_adress())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters email adress</div>
+
+
+		</li>
+		<li test-id='325' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_clicks_login_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks login button</div>
+
+
+		</li>
+		<li test-id='328' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_should_navigate_to_my_account())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to My Account</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='331' status='fail'>
+
+	<span class='duration right label'>00 00 00.001</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Valid Credentials for login</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='334' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_want_to_enter_valid_ceredntials())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User want to enter valid ceredntials</div>
+
+
+		</li>
+		<li test-id='337' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_check_for_email_and_password_fields())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user check for email and password fields</div>
+
+
+		</li>
+		<li test-id='340' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_enters_following_details(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters following details</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>email</td><td>password</td></tr><tr><td>abc@gmail.com</td><td>abc@123</td></tr><tr><td>xyz@gmail.com</td><td>xyz@123</td></tr><tr><td>pqr@gmail.com</td><td>pqr@123</td></tr><tr><td>lmn@gmail.com</td><td>lmn@123</td></tr></table></div>
+		</li>
+		<li test-id='343' class='node and Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And user clicks login in button</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='346' status='pass'>
+
+	<span class='duration right label'>00 00 00.002</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Unsuccessful Verification of Login functionality</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='349' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_should_be_on_the_login_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user should be on the login page</div>
+
+
+		</li>
+		<li test-id='352' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_enters_email_adress())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters email adress</div>
+
+
+		</li>
+		<li test-id='355' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_enters_password())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters password</div>
+
+
+		</li>
+		<li test-id='358' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_clicks_login_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks login button</div>
+
+
+		</li>
+		<li test-id='361' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.error_message_displayed_with_wrong_credentials())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then error message displayed with wrong credentials</div>
+
+
+		</li>
+		<li test-id='364' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_returns_back_on_the_login_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user returns back on the login page</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='367'>
+					<div class='test-heading'>
+						<span class='test-name'>Registration</span>
+						<span class='test-time'>Jan 2, 2024 04:53:58 pm</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  BackGround:
+  Given User on the home page
+  And user follows "Resgister" button</div>
+
+<div class='scenario node' test-id='368' status='fail'>
+
+	<span class='duration right label'>00 00 00.003</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Create a new user</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@regression</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='371' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given User should be on the registration page</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='374' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When User fills registration  "email" with "xxx@gmail.com"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='377' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And User fills registration "password" with "xmiei224"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='380' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And User fills registration "confirm-password" with "xmiei224"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='383' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And User clicks "Register" button</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='386' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then User is created successfully</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='389' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And User return back on registration page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='392' status='fail'>
+
+	<span class='duration right label'>00 00 00.002</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User does not follow form validations</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='395' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given User should be on the registration page</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='398' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When user enters wrong characters</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='401' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Error message displayed with invalid password</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='404' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And User return back on registration page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='407'>
+					<div class='test-heading'>
+						<span class='test-name'>Reset Login Form</span>
+						<span class='test-time'>Jan 2, 2024 04:53:58 pm</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  User wants test reset login form for muliple inputs</div>
+
+<div class='scenario node' test-id='408' status='pass'>
+
+	<span class='duration right label'>00 00 07.215</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verification of reset button with number of credentials</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@ResetLogin</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='412' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.ResetLoginFormSteps.open_the_chrome_and_launch_the_application())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Open the Chrome and launch the application</div>
+
+
+		</li>
+		<li test-id='415' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.ResetLoginFormSteps.maximize_the_chrome_browser_window())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Maximize the Chrome browser window</div>
+
+
+		</li>
+		<li test-id='418' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.ResetLoginFormSteps.enter_the_username_and_password(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter the Username and Password</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>username</td><td>password</td></tr><tr><td>john@gmail.com</td><td>john123</td></tr><tr><td>mike@outlook.com</td><td>mike123</td></tr><tr><td>prajwal@yahoo.com</td><td>prajwal123</td></tr><tr><td>sasidar@gmail.com</td><td>sasidar123</td></tr></table></div>
+		</li>
+		<li test-id='421' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.ResetLoginFormSteps.reset_the_credentials())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Reset the credentials</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='425'>
+					<div class='test-heading'>
+						<span class='test-name'>Reset password</span>
+						<span class='test-time'>Jan 2, 2024 04:54:05 pm</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  I want to verify reset password functionality for existing user</div>
+
+<div class='scenario node' test-id='426' status='fail'>
+
+	<span class='duration right label'>00 00 00.126</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Successful reset password verification</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@regression</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='429' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given user should be logged in</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='432' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user navigate to reset password page "/reset-password"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='435' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user clicks  "Reset password" button</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='438' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When user ask to reset my password</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='441' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then user should review an email with</div>
+
+
+					<div class="node-step"><div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>   Please click this link to reset your password</textarea>
+ </div>
+</div>
+</div>
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='444' status='fail'>
+
+	<span class='duration right label'>00 00 00.000</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Valid Credentials for login</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='447' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given User want to enter valid credentials</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='450' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When user check for "email" and "password" fields</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='453' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_enters_following_details(io.cucumber.datatable.DataTable))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user enters following details</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>email</td><td>password</td></tr><tr><td>abc@gmail.com</td><td>abc@123</td></tr><tr><td>xyz@gmail.com</td><td>xyz@123</td></tr><tr><td>pqr@gmail.com</td><td>pqr@123</td></tr><tr><td>lmn@gmail.com</td><td>lmn@123</td></tr></table></div>
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='456' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user clicks "login" button</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='459' status='fail'>
+
+	<span class='duration right label'>00 00 00.000</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Unsuccessful Verification of Login functionality</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='462' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_should_be_on_the_login_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user should be on the login page</div>
+
+
+		</li>
+		<li test-id='465' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_enters_email_adress())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters email adress</div>
+
+
+		</li>
+		<li test-id='468' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_enters_password())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters password</div>
+
+
+		</li>
+		<li test-id='471' class='node and Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And user clicks "login" button</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='474' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.error_message_displayed_with_wrong_credentials())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then error message displayed with wrong credentials</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='477' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.LoginSteps.user_returns_back_on_the_login_page())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user returns back on the login page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='480'>
+					<div class='test-heading'>
+						<span class='test-name'>Login Feature</span>
+						<span class='test-time'>Jan 2, 2024 04:54:06 pm</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  User want to verify the login functionality</div>
+
+<div class='scenario node' test-id='481' status='pass'>
+
+	<span class='duration right label'>00 00 01.400</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successfull Login Verification</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@LoginTest</span>
+				<span class='category label'>@Regression</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='485' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.StaticLoginSteps.open_the_chrome_and_launch_the_test_application())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Open the Chrome and Launch the test application</div>
+
+
+		</li>
+		<li test-id='488' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.StaticLoginSteps.maximize_the_browser_window())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Maximize the browser window</div>
+
+
+		</li>
+		<li test-id='491' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.StaticLoginSteps.enter_the_username_and_password())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter the username and password</div>
+
+
+		</li>
+		<li test-id='494' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.StaticLoginSteps.click_on_submit_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Click on submit button</div>
+
+
+		</li>
+		<li test-id='497' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.StaticLoginSteps.user_navigated_to_successful_login())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User Navigated to successful login</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='501'>
+					<div class='test-heading'>
+						<span class='test-name'>Ecommerce Web Application</span>
+						<span class='test-time'>Jan 2, 2024 04:54:07 pm</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  I want to use this template for my feature file</div>
+
+<div class='scenario node' test-id='502' status='pass'>
+
+	<span class='duration right label'>00 00 00.000</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successful Login</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@FunctionalTest</span>
+				<span class='category label'>@SmokeTest</span>
+				<span class='category label'>@RegressionTest</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='505' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='508' status='pass'>
+
+	<span class='duration right label'>00 00 00.000</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: UnSuccessful Login</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@FunctionalTest</span>
+				<span class='category label'>@RegressionTest</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='511' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='514' status='pass'>
+
+	<span class='duration right label'>00 00 00.000</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Add a product to bag</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@SmokeTest</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='517' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='520' status='pass'>
+
+	<span class='duration right label'>00 00 00.000</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Add multiple product to bag</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='523' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='526' status='pass'>
+
+	<span class='duration right label'>00 00 00.015</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Remove a product from bag</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@SmokeTest</span>
+				<span class='category label'>@RegressionTest</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='529' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='532' status='pass'>
+
+	<span class='duration right label'>00 00 00.000</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Remove all products from bag</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@RegressionTest</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='535' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='538' status='pass'>
+
+	<span class='duration right label'>00 00 00.008</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: product quantity from bag page</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@SmokeTest</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='541' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='544' status='pass'>
+
+	<span class='duration right label'>00 00 00.000</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Decrease product quantity from bag page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='547' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='550' status='pass'>
+
+	<span class='duration right label'>00 00 00.000</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Buy a product with cash payment</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@SmokeTest</span>
+				<span class='category label'>@End2End</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='553' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='556' status='pass'>
+
+	<span class='duration right label'>00 00 00.000</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Buy a product with CC payment</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@SmokeTest</span>
+				<span class='category label'>@End2End</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='559' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='562' status='pass'>
+
+	<span class='duration right label'>00 00 00.008</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Payment declined</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>PaymentMethod</td></tr><tr><td>CC Card</td></tr><tr><td>DD Card</td></tr><tr><td>Bank Transfer</td></tr><tr><td>PayPal</td></tr><tr><td>Cash</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='563' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Payment declined</div>
+
+				<div class='category-list'>
+						<span class='category label'>@End2End</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='566' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='569' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Payment declined</div>
+
+				<div class='category-list'>
+						<span class='category label'>@End2End</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='572' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='575' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Payment declined</div>
+
+				<div class='category-list'>
+						<span class='category label'>@End2End</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='578' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='581' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Payment declined</div>
+
+				<div class='category-list'>
+						<span class='category label'>@End2End</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='584' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='587' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Payment declined</div>
+
+				<div class='category-list'>
+						<span class='category label'>@End2End</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='590' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.simpilearn.bddtest.stepdefinitions.TagsExSteps.this_is_a_blank_test()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given This is a blank test</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag2</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:53:58 pm</td>
+										<td class='linked' test-id='219'>Title of your 2nd scenario</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Regression</span>
+						<span class='category-status right'>
+						<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:52:02 pm</td>
+										<td class='linked' test-id='20'>Amazon Homepage title verification</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:52:05 pm</td>
+										<td class='linked' test-id='34'>Should not be Amazon Homepage</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:06 pm</td>
+										<td class='linked' test-id='481'>Successfull Login Verification</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@FunctionalTest</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='502'>Successful Login</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='508'>UnSuccessful Login</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@End2End</span>
+						<span class='category-status right'>
+						<span class='label pass'>7</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 7</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='550'>Buy a product with cash payment</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='556'>Buy a product with CC payment</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='563'>Payment declined</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='569'>Payment declined</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='575'>Payment declined</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='581'>Payment declined</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='587'>Payment declined</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Fb2Test</span>
+						<span class='category-status right'>
+						<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:53:28 pm</td>
+										<td class='linked' test-id='107'>Unsuccessful login functionality</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:53:40 pm</td>
+										<td class='linked' test-id='130'>Unsuccessful login functionality</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:53:48 pm</td>
+										<td class='linked' test-id='153'>Unsuccessful login functionality</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Smoke</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:54:05 pm</td>
+										<td class='linked' test-id='426'>Successful reset password verification</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@login</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:53:58 pm</td>
+										<td class='linked' test-id='316'>Successfull Verification of Login functionality</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@FeatureTest</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:52:02 pm</td>
+										<td class='linked' test-id='2'>Search a product and add the first product/result to basket</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@FbTest</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:53:58 pm</td>
+										<td class='linked' test-id='177'>Unsuccessful login functionality</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@AmazonSearchTest2</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:52:24 pm</td>
+										<td class='linked' test-id='71'>Search feature button with number of products on amazon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:52:44 pm</td>
+										<td class='linked' test-id='88'>Search feature button with number of products on amazon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Search</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:52:11 pm</td>
+										<td class='linked' test-id='49'>Verification of search feature button with number of products</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@ResetLogin</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:53:58 pm</td>
+										<td class='linked' test-id='408'>Verification of reset button with number of credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@RegressionTest</span>
+						<span class='category-status right'>
+						<span class='label pass'>4</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='502'>Successful Login</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='508'>UnSuccessful Login</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='526'>Remove a product from bag</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='532'>Remove all products from bag</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag1</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:52:02 pm</td>
+										<td class='linked' test-id='2'>Search a product and add the first product/result to basket</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:53:58 pm</td>
+										<td class='linked' test-id='199'>Title of your  1st scenario</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@SmokeTest</span>
+						<span class='category-status right'>
+						<span class='label pass'>10</span>
+						<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 10</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:52:24 pm</td>
+										<td class='linked' test-id='71'>Search feature button with number of products on amazon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:52:44 pm</td>
+										<td class='linked' test-id='88'>Search feature button with number of products on amazon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:53:28 pm</td>
+										<td class='linked' test-id='107'>Unsuccessful login functionality</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:53:40 pm</td>
+										<td class='linked' test-id='130'>Unsuccessful login functionality</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:53:48 pm</td>
+										<td class='linked' test-id='153'>Unsuccessful login functionality</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:53:58 pm</td>
+										<td class='linked' test-id='177'>Unsuccessful login functionality</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='502'>Successful Login</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='514'>Add a product to bag</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='526'>Remove a product from bag</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='538'>product quantity from bag page</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='550'>Buy a product with cash payment</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:07 pm</td>
+										<td class='linked' test-id='556'>Buy a product with CC payment</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag3</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:53:58 pm</td>
+										<td class='linked' test-id='239'>Title of your  3rd scenario</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@HomepageTest</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:52:02 pm</td>
+										<td class='linked' test-id='20'>Amazon Homepage title verification</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:52:05 pm</td>
+										<td class='linked' test-id='34'>Should not be Amazon Homepage</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@regression</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:53:58 pm</td>
+										<td class='linked' test-id='316'>Successfull Verification of Login functionality</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:53:58 pm</td>
+										<td class='linked' test-id='368'>Create a new user</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 2, 2024 04:54:05 pm</td>
+										<td class='linked' test-id='426'>Successful reset password verification</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@LoginTest</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:54:06 pm</td>
+										<td class='linked' test-id='481'>Successfull Login Verification</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@smoke</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:53:58 pm</td>
+										<td class='linked' test-id='316'>Successfull Verification of Login functionality</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.NullPointerException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:53:58 pm</td>
+										<td class='linked' test-id='180'>Given User should be on login page</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+	at com.simpilearn.bddtest.stepdefinitions.FacebookLoginSteps.user_should_be_on_login_page(FacebookLoginSteps.java:39)
+	at ✽.User should be on login page(file:///C:/Phase2_Eclipse_Workspace/Phase2_BDD_Cucumber/src/test/resource/Features/facebook-login.feature:7)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 2, 2024 04:52:46 pm</td>
+										<td class='linked' test-id='95'>When Enter  search product "Apple Mac book"</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#twotabsearchtextbox"}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [68712c24fb858518dbe06d3fb18dcbaa, findElement {using=id, value=twotabsearchtextbox}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\vetri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52131}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52131/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 68712c24fb858518dbe06d3fb18dcbaa
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at com.simpilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.enter_search_product(AmazonProductSearch2Steps.java:51)
+	at ✽.Enter  search product "Apple Mac book"(file:///C:/Phase2_Eclipse_Workspace/Phase2_BDD_Cucumber/src/test/resource/Features/amazon-search-product2.feature:10)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>14</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>41</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>141</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jan 2, 2024 04:52:01 pm</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jan 2, 2024 04:54:07 pm</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>00 02 05.633</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>version</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<td>os</td>
+								<td>windows</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Skipped</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@tag2</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Regression</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@FunctionalTest</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@End2End</td>
+							<td>7</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Fb2Test</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Smoke</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@login</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@FeatureTest</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@FbTest</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@AmazonSearchTest2</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									50%
+							</td>
+						</tr>
+						<tr>
+							<td>@Search</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@ResetLogin</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@RegressionTest</td>
+							<td>4</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@tag1</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									50%
+							</td>
+						</tr>
+						<tr>
+							<td>@SmokeTest</td>
+							<td>10</td>
+							<td>2</td>
+							<td>0</td>
+							<td>
+									83.333%
+							</td>
+						</tr>
+						<tr>
+							<td>@tag3</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@HomepageTest</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@regression</td>
+							<td>1</td>
+							<td>2</td>
+							<td>0</td>
+							<td>
+									33.333%
+							</td>
+						</tr>
+						<tr>
+							<td>@LoginTest</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@smoke</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 14,
+				passParent: 8,
+				failParent: 6,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				childCount: 41,
+				passChild: 32,
+				failChild: 9,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 141,
+				passGrandChild: 104,
+				failGrandChild: 9,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 28,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "Add to cart":0.03,"Amazon Homepage test":8.819,"Search products on amazon":13.605,"Search product on amazon":63.987,"Facebook login feature":29.683,"Facebook login feature":0.004,"Title of your feature":0.03,"Test Hooks with Scenario Outline":0.015,"Login":0.014,"Registration":0.008,"Reset Login Form":7.215,"Reset password":0.126,"Login Feature":1.4,"Ecommerce Web Application":0.031
+			};
+		</script>
+		
+		  <script src='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>

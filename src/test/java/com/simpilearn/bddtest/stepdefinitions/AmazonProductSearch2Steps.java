@@ -39,7 +39,7 @@ public class AmazonProductSearch2Steps {
 		driver.quit();
 		
 	}
-	@Given("Launch Amazon application on chrome")
+	@Given("Launch amazon application on chrome")
 	public void launch_amazon_application_on_chrome() {
 	    driver.get(siteurl);
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
